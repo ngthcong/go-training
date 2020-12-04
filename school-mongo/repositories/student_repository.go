@@ -25,9 +25,9 @@ type StudentRepository struct {
 	ctx *context.Context
 }
 
-func NewStudentRepository(db *mongo.Database) *StudentRepository {
+func NewStudentRepository(db *mongo.Database,  ctx *context.Context) *StudentRepository {
 	c := db.Collection("student")
-	return &StudentRepository{col: c}
+	return &StudentRepository{col: c,ctx: ctx}
 }
 
 func (r *StudentRepository) Get(id string) (student *Student, err error) {

@@ -25,25 +25,24 @@ type TeacherRepository struct {
 	ctx *context.Context
 }
 
-func NewTeacherRepository(db *mongo.Database) *TeacherRepository {
+func NewTeacherRepository(db *mongo.Database,ctx *context.Context) *TeacherRepository {
 	c := db.Collection("teacher")
-	return &TeacherRepository{col: c}
+	return &TeacherRepository{col: c,ctx: ctx}
 }
 
-func (r *TeacherRepository) Get(id string) (student *Student, err error) {
-	err = r.col.FindOne(*r.ctx, bson.D{{"id", id}}).Decode(&student)
+func (r *TeacherRepository) Get(id string) (teacher *Teacher, err error) {
+	err = r.col.FindOne(*r.ctx, bson.D{{"id", id}}).Decode(&teacher)
 	return
 }
-func (r *TeacherRepository) Add(student *Student) error {
-	_, err := r.col.InsertOne(*r.ctx, student)
+func (r *TeacherRepository) Add(teacher *Teacher) error {
+	_, err := r.col.InsertOne(*r.ctx, teacher)
 	return err
 }
-func (r *TeacherRepository) Update(student *Student) error {
-	filter := bson.D{{"id", student.Id}}
+func (r *TeacherRepository) Update(teacher *Teacher) error {
+	filter := bson.D{{"id", teacher.Id}}
 	after := options.After
 	returnOpt := options.FindOneAndUpdateOptions{ReturnDocument: &after}
-	update := bson.D{{"$set", bson.D{{"name", student.Name},
-		{"class_id", student.ClassID}}}}
+	update := bson.D{{"$set", bson.D{{"name", teacher.Name}}}}
 	err := r.col.FindOneAndUpdate(ctx, filter, update, &returnOpt)
 	return err.Err()
 }

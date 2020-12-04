@@ -24,9 +24,9 @@ type ClassRepository struct {
 	ctx *context.Context
 }
 
-func NewClassRepository(db *mongo.Database) *DisciplineRepository {
-	c := db.Collection("discipline")
-	return &DisciplineRepository{col: c}
+func NewClassRepository(db *mongo.Database,ctx *context.Context) *ClassRepository {
+	c := db.Collection("class")
+	return &ClassRepository{col: c,ctx: ctx}
 }
 
 func (r *ClassRepository) Get(id string) (class *Class, err error) {

@@ -26,9 +26,9 @@ type DisciplineRepository struct {
 	ctx *context.Context
 }
 
-func NewDisciplineRepository(db *mongo.Database) *DisciplineRepository {
+func NewDisciplineRepository(db *mongo.Database,ctx *context.Context) *DisciplineRepository {
 	c := db.Collection("discipline")
-	return &DisciplineRepository{col: c}
+	return &DisciplineRepository{col: c,ctx: ctx}
 }
 
 func (r *DisciplineRepository) Get(id string) (discipline *Discipline, err error) {
