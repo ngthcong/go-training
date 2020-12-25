@@ -19,26 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3923ecc6-f6aa-4865-816a-2da975c5b024" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/internal/repositories/class/class.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/repositories/discipline/discipline.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/repositories/student/student.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/repositories/teacher/teacher.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/services/class/class.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/services/discipline/discipline.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/internal/services/teacher/teacher.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/class_repository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/db.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/repositories/db.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/discipline_repository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/student_repository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/repositories/teacher_repository.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/class_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/discipline_service.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/student_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/services/student/student.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/teacher_service.go" beforeDir="false" />
-    </list>
+    <list default="true" id="3923ecc6-f6aa-4865-816a-2da975c5b024" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
