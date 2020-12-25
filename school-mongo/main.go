@@ -5,30 +5,36 @@ import (
 	"context"
 	"fmt"
 	"os"
-	repo "school-mongo/repositories"
-	"school-mongo/services"
+	repo "school-mongo/internal/repositories"
+	class2 "school-mongo/internal/repositories/class"
+	discipline2 "school-mongo/internal/repositories/discipline"
+	student2 "school-mongo/internal/repositories/student"
+	teacher2 "school-mongo/internal/repositories/teacher"
+	"school-mongo/internal/services/class"
+	"school-mongo/internal/services/discipline"
+	"school-mongo/internal/services/student"
+	"school-mongo/internal/services/teacher"
 )
 
 var (
 	scanner *bufio.Scanner
-	studentService *services.StudentService
-
+	studentService *student.Service
 )
 
 func init(){
 	ctx := context.TODO()
 	db := repo.NewMongoDB()
-	classRepo :=  repo.NewClassRepository(db,&ctx)
-	classService := services.NewClassService(*classRepo)
+	classRepo :=  class2.New(db,ctx)
+	classService := class.New(classRepo)
 
-	teacherRepo :=  repo.NewTeacherRepository(db,&ctx)
-	teacherService := services.NewTeacherService(*teacherRepo)
+	teacherRepo :=  teacher2.New(db,ctx)
+	teacherService := teacher.New(teacherRepo)
 
-	disciplineRepo :=  repo.NewDisciplineRepository(db,&ctx)
-	disciplineService := services.NewDisciplineService(*disciplineRepo)
+	disciplineRepo :=  discipline2.New(db,ctx)
+	disciplineService := discipline.New(disciplineRepo)
 
-	studentRepo :=  repo.NewStudentRepository(db,&ctx)
-	studentService = services.NewStudentService(*studentRepo)
+	studentRepo :=  student2.New(db,ctx)
+	studentService = student.New(studentRepo)
 }
 
 func main() {
@@ -105,7 +111,7 @@ func AddStudent() {
 	scanner.Scan()
 	class := scanner.Text()
 
-	newStudent := &repo.Student{
+	newStudent := &student2.Student{
 		Id:      id,
 		Name:    name,
 		ClassID: class,
@@ -131,7 +137,7 @@ func EditStudent() {
 	scanner.Scan()
 	class := scanner.Text()
 
-	student := &repo.Student{
+	student := &student2.Student{
 		Id:      id,
 		Name:    name,
 		ClassID: class,

@@ -1,32 +1,33 @@
-package services
+package student
 
 import (
 	"errors"
-	repo "school-mongo/repositories"
+	"school-mongo/internal/model"
+	"school-mongo/internal/repositories/student"
 )
 
 type (
-	StudentHandler interface {
-		Get(id string) (*repo.Student, error)
-		Add(class *repo.Student) error
-		Update(class *repo.Student) error
+	Service interface {
+		Get(id string) (model.Student, error)
+		Add(class model.Student) error
+		Update(class model.Student) error
 		Delete(id string) error
 	}
 
-	StudentService struct {
-		Repo repo.StudentRepository
+	service struct {
+		Repo student.Repository
 	}
 )
 
-func NewStudentService(repo repo.StudentRepository) *StudentService {
-	return &StudentService{Repo: repo}
+func New(repo student.Repository) *service {
+	return &service{Repo: repo}
 }
 
-func (s *StudentService) Get(id string) (student *repo.Student, err error) {
+func (s *service) Get(id string) (student model.Student, err error) {
 	return s.Repo.Get(id)
 }
 
-func (s *StudentService) Add(student *repo.Student) error {
+func (s *service) Add(student model.Student) error {
 	if student.Id == "" {
 		return errors.New("id must not null")
 	}
@@ -46,7 +47,7 @@ func (s *StudentService) Add(student *repo.Student) error {
 	return nil
 }
 
-func (s *StudentService) Update(student *repo.Student) error {
+func (s *service) Update(student model.Student) error {
 	_, err := s.Repo.Get(student.Id)
 	if err != nil {
 		return err
@@ -57,7 +58,7 @@ func (s *StudentService) Update(student *repo.Student) error {
 	return nil
 }
 
-func (s *StudentService) Delete(id string) error {
+func (s *service) Delete(id string) error {
 	_, err := s.Repo.Get(id)
 	if err != nil {
 		return err
