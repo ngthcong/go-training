@@ -5,21 +5,19 @@ import (
 	"fmt"
 	"log"
 
-
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"go.mongodb.org/mongo-driver/mongo/readpref"
-
 )
 
-var uri  = "mongodb://localhost:27017"
+var uri = "mongodb://localhost:27017"
 var ctx = context.TODO()
-var dbName = "db_school"
+var dbName = "schoolDB"
 
-func NewMongoDB() *mongo.Database{
+func NewMongoDB() *mongo.Database {
 	// Replace the uri string with your MongoDB deployment's connection string.
 	clientOptions := options.Client().ApplyURI(uri)
-	var client, err = mongo.Connect(ctx,clientOptions)
+	var client, err = mongo.Connect(ctx, clientOptions)
 	if err != nil {
 		log.Fatal(err)
 	}

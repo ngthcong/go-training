@@ -3,38 +3,49 @@ package model
 import "fmt"
 
 type (
+	//Class ....
 	Class struct {
-		Id   string `bson:"id"`
-		Name string `bson:"name"`
+		ID       string `bson:"id"`
+		Name     string `bson:"name"`
+		Teachers string `bson:"teachers"`
 	}
+	//Discipline ....
 	Discipline struct {
-		Id        string `bson:"id"`
+		ID        string `bson:"id"`
 		Name      string `bson:"name"`
-		Lectures  int    `bson:"lectures"`
-		Exercises int    `bson:"exercises"`
+		Lectures  string `bson:"lectures"`
+		Exercises string `bson:"exercises"`
 	}
+	//Student ....
 	Student struct {
-		Id      string `bson:"id"`
+		ID      string `bson:"id"`
 		Name    string `bson:"name"`
 		ClassID string `bson:"class_id"`
 	}
+	//Teacher ....
 	Teacher struct {
-		Id          string `bson:"id"`
+		ID          string `bson:"id"`
 		Name        string `bson:"name"`
-		ClassID     string `bson:"class_id"`
 		Disciplines string `bson:"disciplines"`
 	}
 )
 
+//ToString ...
 func (t Teacher) ToString() string {
-	return fmt.Sprintf("Teacher ID: %s, name: %s, discipline ID: %s", t.Id, t.Name, t.DisciplineID)
+	return fmt.Sprintf("Teacher ID: %s, name: %s, discipline ID: %s", t.ID, t.Name, t.Disciplines)
 }
+
+//ToString ...
 func (t Student) ToString() string {
-	return fmt.Sprintf("Student ID: %s, name: %s, class ID: %s", t.Id, t.Name, t.ClassID)
+	return fmt.Sprintf("Student ID: %s, name: %s, class ID: %s", t.ID, t.Name, t.ClassID)
 }
+
+//ToString ...
 func (t Discipline) ToString() string {
-	return fmt.Sprintf("Discipline ID: %s, name: %s, Lecture : %d, Exercise: %d", t.Id, t.Name, t.Lectures, t.Exercises)
+	return fmt.Sprintf("Discipline ID: %s, name: %s, Lecture : %d, Exercise: %d", t.ID, t.Name, t.Lectures, t.Exercises)
 }
+
+//ToString ...
 func (t Class) ToString() string {
-	return fmt.Sprintf("Class ID: %s, name: %s", t.Id, t.Name)
+	return fmt.Sprintf("Class ID: %s, name: %s", t.ID, t.Name)
 }

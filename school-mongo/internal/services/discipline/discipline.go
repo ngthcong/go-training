@@ -27,7 +27,7 @@ func (s *service) Get(id string) (discipline model.Discipline, err error) {
 }
 
 func (s *service) Add(discipline model.Discipline) error {
-	_, err := s.Repo.Get(discipline.Id)
+	_, err := s.Repo.Get(discipline.ID)
 	if err != nil {
 		return err
 	}
@@ -38,7 +38,7 @@ func (s *service) Add(discipline model.Discipline) error {
 }
 
 func (s *service) Update(discipline model.Discipline) error {
-	_, err := s.Repo.Get(discipline.Id)
+	_, err := s.Repo.Get(discipline.ID)
 	if err != nil {
 		return err
 	}

@@ -7,20 +7,20 @@ import (
 	"school-mongo/internal/services/teacher"
 )
 
-type(
+type (
 	Service struct {
-		classService class.Service
-		disciplineService discipline.Service
-		studentService student.Service
-		teacherService teacher.Service
+		ClassService      class.Service
+		DisciplineService discipline.Service
+		StudentService    student.Service
+		TeacherService    teacher.Service
 	}
 )
 
-func New(classService class.Service, disciplineService discipline.Service, studentService student.Service, teacherService teacher.Service) *Service{
+func New(classService class.Service, disciplineService discipline.Service, studentService student.Service, teacherService teacher.Service) *Service {
 	return &Service{
-		classService:      classService,
-		disciplineService: disciplineService,
-		studentService:    studentService,
-		teacherService:    teacherService,
+		ClassService:      classService,
+		DisciplineService: disciplineService,
+		StudentService:    studentService,
+		TeacherService:    teacherService,
 	}
 }

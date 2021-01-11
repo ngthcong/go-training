@@ -9,8 +9,6 @@ import (
 )
 
 type (
-
-
 	Repository interface {
 		Get(id string) (model.Student, error)
 		Add(student model.Student) error
@@ -38,7 +36,7 @@ func (r *repository) Add(student model.Student) error {
 	return err
 }
 func (r *repository) Update(student model.Student) error {
-	filter := bson.D{{"id", student.Id}}
+	filter := bson.D{{"id", student.ID}}
 	after := options.After
 	returnOpt := options.FindOneAndUpdateOptions{ReturnDocument: &after}
 	update := bson.D{{"$set", bson.D{{"name", student.Name},

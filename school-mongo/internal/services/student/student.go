@@ -28,7 +28,7 @@ func (s *service) Get(id string) (student model.Student, err error) {
 }
 
 func (s *service) Add(student model.Student) error {
-	if student.Id == "" {
+	if student.ID == "" {
 		return errors.New("id must not null")
 	}
 	if student.Name == "" {
@@ -37,8 +37,8 @@ func (s *service) Add(student model.Student) error {
 	if student.ClassID == "" {
 		return errors.New("class id must not null")
 	}
-	_, err := s.Repo.Get(student.Id)
-	if err != nil && err.Error() != "mongo: no documents in result"{
+	_, err := s.Repo.Get(student.ID)
+	if err != nil && err.Error() != "mongo: no documents in result" {
 		return err
 	}
 	if err := s.Repo.Add(student); err != nil {
@@ -48,7 +48,7 @@ func (s *service) Add(student model.Student) error {
 }
 
 func (s *service) Update(student model.Student) error {
-	_, err := s.Repo.Get(student.Id)
+	_, err := s.Repo.Get(student.ID)
 	if err != nil {
 		return err
 	}

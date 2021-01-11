@@ -27,7 +27,7 @@ func (s *service) Get(id string) (class model.Class, err error) {
 }
 
 func (s *service) Add(class model.Class) error {
-	_, err := s.Repo.Get(class.Id)
+	_, err := s.Repo.Get(class.ID)
 	if err != nil {
 		return err
 	}
@@ -38,7 +38,7 @@ func (s *service) Add(class model.Class) error {
 }
 
 func (s *service) Update(class model.Class) error {
-	_, err := s.Repo.Get(class.Id)
+	_, err := s.Repo.Get(class.ID)
 	if err != nil {
 		return err
 	}

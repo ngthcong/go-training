@@ -1,13 +1,19 @@
 package app
 
-import "school-mongo/internal/services"
+import (
+	"school-mongo/internal/handler"
+)
 
 type (
 	App struct {
-		service services.Service
+		handler handler.Handler
 	}
 )
 
-func New(service services.Service) *App {
-	return &App{service: service}
+func New(handler handler.Handler) *App {
+	return &App{handler: handler}
+}
+
+func (a App) Start() {
+	a.handler.InitProgram()
 }
