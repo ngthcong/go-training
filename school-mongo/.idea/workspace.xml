@@ -21,17 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3923ecc6-f6aa-4865-816a-2da975c5b024" name="Default Changelist" comment="Add school mongoDB">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/app.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handler/class/class.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handler/discipline/discipline.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handler/handler.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/handler/handler.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handler/student/student.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/handler/teacher/teacher.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/model/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/model/models.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/services/class/class.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/services/class/class.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/services/discipline/discipline.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/services/discipline/discipline.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/services/student/student.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/services/student/student.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/services/teacher/teacher.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/services/teacher/teacher.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +114,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/internal/services/class/class.go</url>
-          <line>31</line>
+          <line>30</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
