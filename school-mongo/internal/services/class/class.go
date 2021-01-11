@@ -1,6 +1,7 @@
 package class
 
 import (
+	"errors"
 	"school-mongo/internal/model"
 	"school-mongo/internal/repositories/class"
 )
@@ -27,12 +28,14 @@ func (s *service) Get(id string) (class model.Class, err error) {
 }
 
 func (s *service) Add(class model.Class) error {
-	_, err := s.Repo.Get(class.ID)
-	if err != nil {
-		return err
+	v, err := s.Repo.Get(class.ID)
+	if err != nil && err.Error() == model.NO_DOCUMENT {
+		if err := s.Repo.Add(class); err != nil {
+			return err
+		}
 	}
-	if err := s.Repo.Add(class); err != nil {
-		return err
+	if v.ID != "" {
+		return errors.New("ID already exist")
 	}
 	return nil
 }

@@ -1,6 +1,7 @@
 package teacher
 
 import (
+	"errors"
 	"school-mongo/internal/model"
 	"school-mongo/internal/repositories/teacher"
 )
@@ -27,19 +28,21 @@ func (s *service) Get(id string) (teacher model.Teacher, err error) {
 }
 
 func (s *service) Add(teacher model.Teacher) error {
-	_, err := s.Repo.Get(teacher.ID)
-	if err != nil {
-		return err
+	v, err := s.Repo.Get(teacher.ID)
+	if err != nil && err.Error() == model.NO_DOCUMENT {
+		if err := s.Repo.Add(teacher); err != nil {
+			return err
+		}
 	}
-	if err := s.Repo.Add(teacher); err != nil {
-		return err
+	if v.ID != "" {
+		return errors.New("ID already exist")
 	}
 	return nil
 }
 
 func (s *service) Update(teacher model.Teacher) error {
 	_, err := s.Repo.Get(teacher.ID)
-	if err != nil {
+	if err != nil && err.Error() == model.NO_DOCUMENT {
 		return err
 	}
 	if err := s.Repo.Update(teacher); err != nil {
@@ -50,7 +53,7 @@ func (s *service) Update(teacher model.Teacher) error {
 
 func (s *service) Delete(id string) error {
 	_, err := s.Repo.Get(id)
-	if err != nil {
+	if err != nil && err.Error() == model.NO_DOCUMENT {
 		return err
 	}
 	if err := s.Repo.Delete(id); err != nil {

@@ -1,34 +1,41 @@
 package model
 
-import "fmt"
-
-type (
-	//Class ....
-	Class struct {
-		ID       string `bson:"id"`
-		Name     string `bson:"name"`
-		Teachers string `bson:"teachers"`
-	}
-	//Discipline ....
-	Discipline struct {
-		ID        string `bson:"id"`
-		Name      string `bson:"name"`
-		Lectures  string `bson:"lectures"`
-		Exercises string `bson:"exercises"`
-	}
-	//Student ....
-	Student struct {
-		ID      string `bson:"id"`
-		Name    string `bson:"name"`
-		ClassID string `bson:"class_id"`
-	}
-	//Teacher ....
-	Teacher struct {
-		ID          string `bson:"id"`
-		Name        string `bson:"name"`
-		Disciplines string `bson:"disciplines"`
-	}
+import (
+	"fmt"
 )
+
+const (
+	NO_DOCUMENT = "mongo: no documents in result"
+)
+
+//Class ....
+type Class struct {
+	ID       string `bson:"id"`
+	Name     string `bson:"name"`
+	Teachers string `bson:"teachers"`
+}
+
+//Discipline ....
+type Discipline struct {
+	ID        string `bson:"id"`
+	Name      string `bson:"name"`
+	Lectures  string `bson:"lectures"`
+	Exercises string `bson:"exercises"`
+}
+
+//Student ....
+type Student struct {
+	ID      string `bson:"id"`
+	Name    string `bson:"name"`
+	ClassID string `bson:"class_id"`
+}
+
+//Teacher ....
+type Teacher struct {
+	ID          string `bson:"id"`
+	Name        string `bson:"name"`
+	Disciplines string `bson:"disciplines"`
+}
 
 //ToString ...
 func (t Teacher) ToString() string {

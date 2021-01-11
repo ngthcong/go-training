@@ -1,6 +1,7 @@
 package discipline
 
 import (
+	"errors"
 	"school-mongo/internal/model"
 	"school-mongo/internal/repositories/discipline"
 )
@@ -27,12 +28,14 @@ func (s *service) Get(id string) (discipline model.Discipline, err error) {
 }
 
 func (s *service) Add(discipline model.Discipline) error {
-	_, err := s.Repo.Get(discipline.ID)
-	if err != nil {
-		return err
+	v, err := s.Repo.Get(discipline.ID)
+	if err != nil && err.Error() == model.NO_DOCUMENT {
+		if err := s.Repo.Add(discipline); err != nil {
+			return err
+		}
 	}
-	if err := s.Repo.Add(discipline); err != nil {
-		return err
+	if v.ID != "" {
+		return errors.New("ID already exist")
 	}
 	return nil
 }

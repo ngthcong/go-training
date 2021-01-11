@@ -28,21 +28,15 @@ func (s *service) Get(id string) (student model.Student, err error) {
 }
 
 func (s *service) Add(student model.Student) error {
-	if student.ID == "" {
-		return errors.New("id must not null")
+
+	v, err := s.Repo.Get(student.ID)
+	if err != nil && err.Error() == model.NO_DOCUMENT {
+		if err := s.Repo.Add(student); err != nil {
+			return err
+		}
 	}
-	if student.Name == "" {
-		return errors.New("name must not null")
-	}
-	if student.ClassID == "" {
-		return errors.New("class id must not null")
-	}
-	_, err := s.Repo.Get(student.ID)
-	if err != nil && err.Error() != "mongo: no documents in result" {
-		return err
-	}
-	if err := s.Repo.Add(student); err != nil {
-		return err
+	if v.ID != "" {
+		return errors.New("ID already exist")
 	}
 	return nil
 }

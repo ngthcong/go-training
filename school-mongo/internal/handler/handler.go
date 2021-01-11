@@ -109,6 +109,10 @@ func (h *handler) AddClass() {
 	}
 	fmt.Println(class.ToString())
 	if err := h.s.ClassService.Add(class); err != nil {
+		if err.Error() == "ID already exist" {
+			fmt.Println(err.Error())
+			h.AddClass()
+		}
 		panic(err)
 	}
 	fmt.Println("Add class success")
@@ -122,7 +126,10 @@ func (h *handler) DeleteClass() {
 	id := h.sc.Text()
 
 	if err := h.s.ClassService.Delete(id); err != nil {
-		panic(err)
+		if err.Error() == model.NO_DOCUMENT {
+			fmt.Println("ID not found")
+			h.DeleteClass()
+		}
 	}
 
 	fmt.Printf("Delete class with id: %s \n", id)
