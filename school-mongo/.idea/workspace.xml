@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3923ecc6-f6aa-4865-816a-2da975c5b024" name="Default Changelist" comment="Add school mongoDB">
+      <change afterPath="$PROJECT_DIR$/../school-mysql/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
