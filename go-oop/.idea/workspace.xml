@@ -21,8 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="47502d3a-a4a7-4f94-a8e2-c005471e54ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main_test.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,13 +60,22 @@
       <recent name="D:\Repo\Go\go-training\go-oop\phone" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go-oop/animal">
+  <component name="RunManager" selected="Go Build.go build go-oop/hrmanagement">
     <configuration name="go build go-oop/animal" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-oop" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/animal/animal.go" />
       <package value="go-oop/animal" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build go-oop/hrmanagement" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-oop" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/hrmanagement/hrmanagement.go" />
+      <package value="go-oop/hrmanagement" />
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
@@ -106,6 +113,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build go-oop/hrmanagement" />
         <item itemvalue="Go Build.go build go-oop/animal" />
         <item itemvalue="Go Test.go test go-oop/phone" />
         <item itemvalue="Go Test.TestCallHistory in go-oop" />
@@ -140,21 +148,25 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1292" y="533" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1606983628814" />
-    <state width="914" height="285" key="GridCell.Tab.0.bottom" timestamp="1610356505018">
+    <state width="914" height="285" key="GridCell.Tab.0.bottom" timestamp="1610359457322">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="914" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1610356505018" />
-    <state width="914" height="285" key="GridCell.Tab.0.center" timestamp="1610356505018">
+    <state width="914" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1610359457322" />
+    <state width="914" height="285" key="GridCell.Tab.0.center" timestamp="1610359457322">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="914" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1610356505018" />
-    <state width="914" height="285" key="GridCell.Tab.0.left" timestamp="1610356505018">
+    <state width="914" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1610359457322" />
+    <state width="914" height="285" key="GridCell.Tab.0.left" timestamp="1610359457322">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="914" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1610356505018" />
-    <state width="914" height="285" key="GridCell.Tab.0.right" timestamp="1610356505018">
+    <state width="914" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1610359457322" />
+    <state width="914" height="285" key="GridCell.Tab.0.right" timestamp="1610359457322">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="914" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1610356505018" />
+    <state width="914" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1610359457322" />
+    <state x="1103" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1610357379007">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1103" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1610357379007" />
   </component>
 </project>
