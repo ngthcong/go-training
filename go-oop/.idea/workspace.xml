@@ -20,11 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="47502d3a-a4a7-4f94-a8e2-c005471e54ca" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../school-mongo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../school-mongo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main_test.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +57,21 @@
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Go Test.TestCallHistory in go-oop">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Repo\Go\go-training\go-oop\phone" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build go-oop/animal">
+    <configuration name="go build go-oop/animal" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="go-oop" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/animal/animal.go" />
+      <package value="go-oop/animal" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestCallHistory in go-oop" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go-oop" />
       <working_directory value="$PROJECT_DIR$" />
@@ -82,8 +94,20 @@
       <pattern value="^\QTestGSM\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="go test go-oop/phone" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go-oop" />
+      <working_directory value="$PROJECT_DIR$/phone" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="go-oop/phone" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build go-oop/animal" />
+        <item itemvalue="Go Test.go test go-oop/phone" />
         <item itemvalue="Go Test.TestCallHistory in go-oop" />
         <item itemvalue="Go Test.TestGSM in go-oop" />
       </list>
@@ -116,21 +140,21 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="1292" y="533" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1606983628814" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1610350674292">
+    <state width="914" height="285" key="GridCell.Tab.0.bottom" timestamp="1610356505018">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1610350674292" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1610350674292">
+    <state width="914" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1610356505018" />
+    <state width="914" height="285" key="GridCell.Tab.0.center" timestamp="1610356505018">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1610350674292" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1610350674292">
+    <state width="914" height="285" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1610356505018" />
+    <state width="914" height="285" key="GridCell.Tab.0.left" timestamp="1610356505018">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1610350674292" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1610350674292">
+    <state width="914" height="285" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1610356505018" />
+    <state width="914" height="285" key="GridCell.Tab.0.right" timestamp="1610356505018">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1610350674292" />
+    <state width="914" height="285" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1610356505018" />
   </component>
 </project>

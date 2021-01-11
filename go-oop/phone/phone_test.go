@@ -1,9 +1,10 @@
-package main
+package phone
+
 
 import (
-	"fmt"
-	"testing"
-	"time"
+"fmt"
+"testing"
+"time"
 )
 
 func TestGSM(t *testing.T) {
